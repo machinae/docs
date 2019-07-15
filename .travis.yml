@@ -9,7 +9,7 @@ before_deploy:
 - pip install --user awscli
 deploy:
 - provider: script
-  script: aws s3 sync build s3://developers.endpass.com --region=us-east-1 --delete
+  script: aws s3 sync build s3://developers-private.endpass.com --region=us-east-1 --delete
   skip_cleanup: true
   on:
     branch: master
